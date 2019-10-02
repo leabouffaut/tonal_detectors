@@ -1,15 +1,22 @@
-% function [time_yin, f0_yin] = yin_estimator(p,f,t,x, fs,  varargin)
+% function [time, f0, Start, End ] = lea_yin_estimator(x,fs,delta_t,delta_f,signal_mini_duration_s,varargin)
+%
+% This pitch tracking function is based on the function https://github.com/orchidas/Pitch-Tracking/blob/master/yin_estimator.m
+% that implements YIN algorithm for fundamental pitch tracking. 
+%
+    % INPUTS:
+    %  - x: observation signal,
+    %  - fs:  sampling frequency (Hz),
+    %  - delta_t: minimum time interval between two tonals (s),
+    %  - delta_f: minimum frequency interval between two tonals (Hz),
+    %  - signal_mini_duration: minimum tonal signal duration (samples).
+    %
+    % OUTPUTS:
+    %  - f0: frequency estimate,
+    %  - time: time vector of the frequency tracks,
+    %  - Start: Starting sample of each detected tonal signal,
+    %  - End: Ending sample of each tonal signal.
 
-% Yin estimator function + segmentation of the results
-
-function [time_yin, f0_yin, Start, End ] = lea_yin_estimator(x,fs,delta_t,delta_f,signal_mini_duration_s,varargin)
-% from https://github.com/orchidas/Pitch-Tracking/blob/master/yin_estimator.m
-% function that implements YIN algorithm for
-% fundamental pitch tracking
-% x - input audio signal
-% fs - sampling rate
-% time_yin,f0_yin - time_yin vector and associated fundamental frequencies estimated
-
+function [time, f0, Start, End ] = lea_yin_estimator(x,fs,delta_t,delta_f,signal_mini_duration_s,varargin)
 % window size -  we assume the minimum f0_yin to be 1/0.25 = 4Hz 
 win = round(0.25*fs);
 N = length(x);
@@ -157,9 +164,9 @@ if isnan(ind)==0
     Start = [Start(1:ind-1) Start(ind+1:end)];
 end
 
-f0_yin = f0_short;
+f0 = f0_short;
     % Good size
-    time_yin = (0:N-1)/fs;
+    time = (0:N-1)/fs;
 if length(Start) > 1
 
     f0_yin_final = NaN(size(time_yin));
@@ -170,7 +177,7 @@ if length(Start) > 1
         End(i) = find(time_yin >= t_short(End_old),1)-1;
         f0_yin_final(Start(i):End(i)) = interp1(t_short(Start_old:End_old),f0_yin(Start_old:End_old),time_yin(Start(i):End(i)));
     end
-    f0_yin = f0_yin_final;
+    f0 = f0_yin_final;
 
 end
 end
