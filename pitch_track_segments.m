@@ -1,10 +1,22 @@
-function [f0,time,ampl,Start,End] = pitch_track_segments(f0,time,ampl,delta_t,delta_f,signal_mini_duration)
+% function [f0,time,ampl,Start,End] = pitch_track_segments(f0, time, ampl, delta_t, delta_f, signal_mini_duration)
+%
+% This function converts continuous detection into finite tracks according to the input set up rules.
+% 
+    % INPUTS:
+    %  - [f0, time, ampl]: frequency estimate, time vector and amplitude of a previously applied tonal detector
+    %  - delta_t: minimum time interval between two tonals (s),
+    %  - delta_f: minimum frequency interval between two tonals (Hz),
+    %  - signal_mini_duration: minimum tonal signal duration (samples).
+    %
+    % OUTPUTS:
+    %  - f0: frequency estimate,
+    %  - time: time vector of the frequency tracks,
+    %  - Start: Starting sample of each detected tonal signal,
+    %  - End: Ending sample of each tonal signal.
+
+function [f0, time, ampl, Start, End] = pitch_track_segments(f0, time, ampl, delta_t, delta_f, signal_mini_duration)
 Start = 1;
 End = [];
-
-% delta_t = 3;%(s)
-% delta_f = 0.8;%(Hz)
-% signal_mini_duration = 15; %(samples)
 
 % Detection of the pitch track contours (start and end point)
 index = isnan(f0)==0; % index = 0 <=> signal detecte
