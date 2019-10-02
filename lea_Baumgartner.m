@@ -4,6 +4,8 @@
 % Baumgartner2011. First a "thresholding is applied. Then, to find the
 % pitch tracks, then a cost calculation is realized to associates STFT 
 % pixels of a track together and have only one f0 value/time. 
+% Need to be followed by function pitch_track_segments.m to convert detections
+% into tracks.
 %
     % INPUTS:
     %  - spectrogram p,f,t
