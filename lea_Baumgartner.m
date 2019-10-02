@@ -10,11 +10,11 @@
     %  - Ts: fix threshold in dB.
     %
     % OUTPUTS:
-    %  - f0_inst_freq: Pitch track from instantaneous frequency estimate,
-    %  - time_inst_freq: time of the HPS pitch track,
-    %  - ampl_inst_freq: amplitude of the tracks.
+    %  - f0: frequency estimate,
+    %  - time: time vector of the frequency tracks,
+    %  - ampl: amplitude of the tracks.
 
-function [f0_baumgartner, time_baumgartner, ampl_baumgartner] = lea_Baumgartner(p,f,t,Ts)
+function [f0, time, ampl] = lea_Baumgartner(p,f,t,Ts)
 
 threshold = 10.^(Ts/10); % real amplitude threshold
 
@@ -78,6 +78,6 @@ end
 %  % ---------------------- -------------------- -------------------- %
 
 
-f0_baumgartner = Detected_freq;
-time_baumgartner = t;
-ampl_baumgartner = Detected_amp;
+f0 = Detected_freq;
+time = t;
+ampl = Detected_amp;
