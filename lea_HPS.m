@@ -3,6 +3,8 @@
 % This pitch tracking function is based on the Harmonic Product Spectrum
 % (HPS) algorithm, as described un (Cuadra2001) using the spectrogram as 
 % time-framing and DFT function.
+% Need to be followed by function pitch_track_segments.m to convert detections
+% into tracks.
 %
     % INPUTS:
     %  - spectrogram p,f,t
