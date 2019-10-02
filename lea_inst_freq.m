@@ -10,14 +10,12 @@
     %  - fs:  sampling frequency (Hz),
     %
     % OUTPUTS:
-    %  - f0_inst_freq: Pitch track from instantaneous frequency estimate,
-    %  - time_inst_freq: time of the HPS pitch track,
-    %  - ampl_inst_freq: amplitude of the tracks.
+    %  - f0: frequency estimate,
+    %  - time: time vector of the frequency tracks,
+    %  - ampl: amplitude of the tracks.
 
 
-function [f0_inst_freq, time_inst_freq, ampl_inst_freq] = lea_inst_freq(p,f,t,x,fs)
-% function [f0_inst_freq, time_inst_freq, ampl_inst_freq] = lea_inst_freq(x,fs,fft_size,overlap)
-%[~,f,t,p] = spectrogram(x,hann(fft_size),round((overlap/100)*fft_size),fft_size,fs);
+function [f0, time, ampl] = lea_inst_freq(p,f,t,x,fs)
 
 % Instantaneous frequency measurement
 z = hilbert(x);
@@ -50,7 +48,7 @@ end
 % time_inst_freq = tx(var_f0<50);
 % ampl_inst_freq = ampl_inst_freq(var_f0<50);
 
-f0_inst_freq = [instfreq_filt 0];
-time_inst_freq = tx;
-ampl_inst_freq = [ampl_inst_freq 0];
+f0 = [instfreq_filt 0];
+time = tx;
+ampl = [ampl_inst_freq 0];
 
