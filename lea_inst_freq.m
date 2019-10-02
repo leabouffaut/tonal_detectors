@@ -3,6 +3,8 @@
 % This pitch tracking function is based on instantaneous frequency
 % estimate in time. A smoothing median filter is applied as well as
 % mean variance measurement for rejecting part of the data.
+% Need to be followed by function pitch_track_segments.m to convert detections
+% into tracks.
 %
     % INPUTS:
     %  - spectrogram p,f,t
