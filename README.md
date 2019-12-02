@@ -20,3 +20,5 @@ L. Bouffaut, S. Madhusudhana, V. Labat, A. Boudraa and H. Klinck (In prep.), “
 - <b> Ridge detector</b>, based on S. K. Madhusudhana, "Automatic detectors for underwater soundscape measurements," Ph.D. thesis, Curtin University, 2015.
 
 * <i> An additional function is added to allow SNR-control on simulations.</i>
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
