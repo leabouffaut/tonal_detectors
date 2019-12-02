@@ -21,4 +21,4 @@ L. Bouffaut, S. Madhusudhana, V. Labat, A. Boudraa and H. Klinck (In prep.), “
 
 * <i> An additional function is added to allow SNR-control on simulations.</i>
 
-![Illustrations of the detectors on ABW calls](https://github.com/leabouffaut/tonal_detectors/blob/master/Figure3.pdf)
+![Illustrations of the detectors on ABW calls](https://github.com/leabouffaut/tonal_detectors/blob/master/Figure3.png)
