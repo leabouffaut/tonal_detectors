@@ -6,7 +6,7 @@ Methods are described and compared for the detection of low-frequency whale sign
 - L. Bouffaut, S. Madhusudhana, V. Labat, A. Boudraa and H. Klinck (In prep.), “Comparative study of tonal detectors for low frequency vocalizations of blue whales,” prepared for J. Acoust. Soc. Am.
 
 # Methods implemented
-- <g> Instantaneous frequency estimator <\g>, based on Boashash, "Estimating and interpreting the instantaneous frequency of a signal. II. algorithms and applications," Proc. of the IEEE 80(4), 540-568 (1992) doi: 10.1109/5.135378.
+- <b> Instantaneous frequency estimator <\b>, based on Boashash, "Estimating and interpreting the instantaneous frequency of a signal. II. algorithms and applications," Proc. of the IEEE 80(4), 540-568 (1992) doi: 10.1109/5.135378.
 
 - YIN estimator, based on A. De Cheveigné and H. Kawahara, "YIN, a fundamental frequency estimator for speech and music," J. Acoust. Soc. Am. 111(4), 1917-1930 (2002) doi: 10.1121/1.1458024.
 
