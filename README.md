@@ -2,6 +2,11 @@
 Tonal detectors for low frequency vocalization of whales
 [![DOI](https://zenodo.org/badge/182302880.svg)](https://zenodo.org/badge/latestdoi/182302880)
 
+Author: Léa Bouffaut, Ph.D. [Personal website](https://leabouffaut.home.blog) | [Researchgate](https://www.researchgate.net/profile/Lea_Bouffaut)
+
+This work was conducted during my Ph.D. financed by the french Naval Academy (Institut de Recherche de l'Ecole Navale - Brest, France) and was also developed during my visit to the Center for Conservation Bioacoustics at the Cornell Lab of Ornithology - Cornell University, Ithaca (NY, USA). 
+
+
 Methods are described and compared for the detection of low-frequency whale signals (Antarctic Blue Whale) in: 
 
 L. Bouffaut, S. Madhusudhana, V. Labat, A. Boudraa and H. Klinck, “A performance comparison of tonal detectors for low frequency vocalizations of Antarctic blue whales,” accepted for publication for J. Acoust. Soc. Am. on Dec 31, 2019.
